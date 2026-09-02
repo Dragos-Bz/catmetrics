@@ -55,4 +55,4 @@ Huismans, N., Nijenhuis, J., and Sirchenko, A. (2023). Details to be completed w
 
 ## License
 
-License information to be added prior to publication.
+License information to be added after publication in the Stata Journal.
