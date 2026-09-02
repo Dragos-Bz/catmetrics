@@ -1,0 +1,36 @@
+. matrix C = (11,2,3 \ 3,16,6 \ 7,5,22)
+
+. catmetrics, mat(C)
+
+Contingency Table
+
+    Actual |      1      2      3 |    Total 
+-----------+----------------------+----------
+ Predicted |                      |
+         1 |     11      2      3 |       16 
+         2 |      3     16      6 |       25 
+         3 |      7      5     22 |       34 
+-----------+----------------------+----------
+     Total |     21     23     31 |       75 
+
+Selected measures of association & hard forecast evaluation
+---------------------------------------------------------------------
+Measure                                               Range     Value
+---------------------------------------------------------------------
+1. Accuracy                                         [0 → 1]    0.6533
+9. Balanced accuracy                          [0 → 0.5 → 1]    0.6430
+42. Clayton skill score                        [-1 → 0 → 1]    0.4766
+44. Cohen kappa coefficient                    [-1 → 0 → 1]    0.4672
+52. Cramer concordance coefficient                  [0 → 1]    0.2289
+132. Goodman-Kruskal lambda coefficient             [0 → 1]    0.3659
+134. Goodman-Kruskal tau coefficient                [0 → 1]    0.2262
+138. Gorodkin Rk coefficient                   [-1 → 0 → 1]    0.4697
+163. Krippendorff alpha coefficient              [-.99 → 1]    0.4694
+205. Peirce skill score                        [-1 → 0 → 1]    0.4629
+234. Scott pi coefficient                          [-1 → 1]    0.4658
+241. Sokal-Sneath similarity coefficient #3    [0 → .5 → 1]    0.6506
+256. Theil uncertainty coefficient U                [0 → 1]    0.1987
+260. Tschuprow T coefficient                        [0 → 1]    0.4784
+---------------------------------------------------------------------
+
+See the Excel file 'Catmetrics.xlsx' for the complete output.

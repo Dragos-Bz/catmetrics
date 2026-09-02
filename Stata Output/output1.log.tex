@@ -1,0 +1,36 @@
+. matrix C = (11,2,3 \\ 3,16,6 \\ 7,5,22)
+{\smallskip}
+. catmetrics, mat(C)
+{\smallskip}
+{\bftt{Contingency Table}}
+{\smallskip}
+    Actual {\VBAR}      1      2      3 {\VBAR}    Total 
+\HLI{11}{\PLUS}\HLI{22}{\PLUS}\HLI{10}
+ Predicted {\VBAR}                      {\VBAR}
+         1 {\VBAR}     11      2      3 {\VBAR}       16 
+         2 {\VBAR}      3     16      6 {\VBAR}       25 
+         3 {\VBAR}      7      5     22 {\VBAR}       34 
+\HLI{11}{\PLUS}\HLI{22}{\PLUS}\HLI{10}
+     Total {\VBAR}     21     23     31 {\VBAR}       75 
+{\smallskip}
+{\bftt{Selected measures of association \& hard forecast evaluation}}
+\HLI{69}
+Measure                                               Range     Value
+\HLI{69}
+1. Accuracy                                         [0 → 1]  {\bftt{  0.6533}}
+9. Balanced accuracy                          [0 → 0.5 → 1]  {\bftt{  0.6430}}
+42. Clayton skill score                        [-1 → 0 → 1]  {\bftt{  0.4766}}
+44. Cohen kappa coefficient                    [-1 → 0 → 1]  {\bftt{  0.4672}}
+52. Cramer concordance coefficient                  [0 → 1]  {\bftt{  0.2289}}
+132. Goodman-Kruskal lambda coefficient             [0 → 1]  {\bftt{  0.3659}}
+134. Goodman-Kruskal tau coefficient                [0 → 1]  {\bftt{  0.2262}}
+138. Gorodkin Rk coefficient                   [-1 → 0 → 1]  {\bftt{  0.4697}}
+163. Krippendorff alpha coefficient              [-.99 → 1]  {\bftt{  0.4694}}
+205. Peirce skill score                        [-1 → 0 → 1]  {\bftt{  0.4629}}
+234. Scott pi coefficient                          [-1 → 1]  {\bftt{  0.4658}}
+241. Sokal-Sneath similarity coefficient \#3    [0 → .5 → 1]  {\bftt{  0.6506}}
+256. Theil uncertainty coefficient U                [0 → 1]  {\bftt{  0.1987}}
+260. Tschuprow T coefficient                        [0 → 1]  {\bftt{  0.4784}}
+\HLI{69}
+{\smallskip}
+{\bftt{See the Excel file 'Catmetrics.xlsx' for the complete output.}}

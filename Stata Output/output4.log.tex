@@ -1,0 +1,55 @@
+. webuse tobacco, clear
+(Fictional tobacco consumption data)
+{\smallskip}
+. quietly zioprobit tobacco education income i.female age,  ///
+> inflate(education income i.parent age i.female i.religion)
+{\smallskip}
+. catmetrics tobacco, pred metrics(ordinal)
+{\smallskip}
+{\bftt{Confusion Matrix}}
+{\smallskip}
+    Actual {\VBAR}      0      1      2      3 {\VBAR}    Total 
+\HLI{11}{\PLUS}\HLI{29}{\PLUS}\HLI{10}
+ Predicted {\VBAR}                             {\VBAR}
+         0 {\VBAR}   8006    783    458    586 {\VBAR}     9833 
+         1 {\VBAR}   1166   2941    162      0 {\VBAR}     4269 
+         2 {\VBAR}    237     82    416     36 {\VBAR}      771 
+         3 {\VBAR}     60      0     14     53 {\VBAR}      127 
+\HLI{11}{\PLUS}\HLI{29}{\PLUS}\HLI{10}
+     Total {\VBAR}   9469   3806   1050    675 {\VBAR}    15000 
+{\smallskip}
+{\bftt{Selected proper scores for probabilistic forecasts}}
+\HLI{59}
+Score                                 Range           Value
+\HLI{59}
+P5 Ranked probability score [ORD]    [0 ← 1]    {\bftt{     0.0814}}
+\HLI{59}
+ORD: suited for ordinal data only.
+{\smallskip}
+{\bftt{Selected diagnostic measures for probabilistic forecasts}}
+\HLI{46}
+Score                       Range        Value
+\HLI{46}
+P18 2AFC score \#2 [ORD]    [0 → 1]     {\bftt{ 0.8167}}
+\HLI{46}
+ORD: suited for ordinal data only.
+{\smallskip}
+{\bftt{Selected measures of association \& hard forecast evaluation}}
+\HLI{75}
+Measure                                                   Range       Value
+\HLI{75}
+118. Gerrity skill score [ORD]                     [-1 → 0 → 1]  {\bftt{    0.2869}}
+131. Goodman-Kruskal gamma coefficient [ORD]       [-1 → 0 → 1]  {\bftt{    0.6397}}
+156. Kendall tau-a coefficient [ORD]           [-.75 → 0 → .75]  {\bftt{    0.2255}}
+157. Kendall tau-b coefficient [ORD]               [-1 → 0 → 1]  {\bftt{    0.4440}}
+162. Koppen index [ORD]                                 [0 → 1]  {\bftt{    0.8358}}
+180. Mantel-Haenszel statistic [ORD]                [0 → 14999]  {\bftt{   1.7e+03}}
+209. Pollaczek-Geiringer coefficient [ORD]         [-1 → 0 → 1]  {\bftt{    0.5960}}
+245. Somers d statistics [ORD]                     [-1 → 0 → 1]  {\bftt{    0.4253}}
+252. Stuart tau-c correlation [ORD]                [-1 → 0 → 1]  {\bftt{    0.3007}}
+258. Tonnies coefficient [ORD]                         [-2 → 2]  {\bftt{    1.2829}}
+268. 2AFC statistic \#2 [ORD]                       [0 → .5 → 1]  {\bftt{    0.7127}}
+\HLI{75}
+ORD: suited for ordinal data only
+{\smallskip}
+{\bftt{See the Excel file 'Catmetrics.xlsx' for the complete output.}}

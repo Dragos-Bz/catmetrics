@@ -1,0 +1,80 @@
+. webuse sysdsn1, clear
+(Health insurance data)
+{\smallskip}
+. quietly mlogit insure age male nonwhite i.site
+{\smallskip}
+. predict p*
+(option {\bftt{pr}} assumed; predicted probabilities)
+(1 missing value generated)
+{\smallskip}
+. catmetrics insure, probs(p1 p2 p3) classmetrics noexcel ///
+> metrics(P1 P2 P6 P14 P15 P16 P17 1 9 44 54 120 138 148 205)
+WARNING: 29 observation(s) with missing data were removed.
+(Indices removed: 5 8 22 41 63 110 144 177 189 216 225 241 242 255 268 301 308 338 343 41
+> 2 487 494 513 521 537 566 614 620 636)
+{\smallskip}
+{\bftt{Confusion Matrix}}
+{\smallskip}
+    Actual {\VBAR}      1      2      3 {\VBAR}    Total 
+\HLI{11}{\PLUS}\HLI{22}{\PLUS}\HLI{10}
+ Predicted {\VBAR}                      {\VBAR}
+         1 {\VBAR}    203    132     28 {\VBAR}      363 
+         2 {\VBAR}     90    145     17 {\VBAR}      252 
+         3 {\VBAR}      0      0      0 {\VBAR}        0 
+\HLI{11}{\PLUS}\HLI{22}{\PLUS}\HLI{10}
+     Total {\VBAR}    293    277     45 {\VBAR}      615 
+{\smallskip}
+{\bftt{Selected proper scores for probabilistic forecasts}}
+\HLI{46}
+Score                    Range           Value
+\HLI{46}
+P1 Brier score          [0 ← 1]    {\bftt{     0.2699}}
+P2 Logarithmic score    [0 ← ∞]    {\bftt{     1.5835}}
+P6 Spherical score      [0 ← 1]    {\bftt{     0.3225}}
+\HLI{46}
+{\smallskip}
+{\bftt{Selected diagnostic measures for probabilistic forecasts}}
+\HLI{89}
+\HLI{8}
+Score                             Range        Value    Class    Class    Class    Macro 
+>    Wgted
+                                                          (1)      (2)      (3)    averg 
+>    averg
+\HLI{89}
+\HLI{8}
+P14 Mean probability rate        [0 → 1]     {\bftt{  0.460}}
+P15 Normalized area under CAP    [0 → 1]     {\bftt{       }} {\bftt{   0.236}} {\bftt{   0.260}} {\bftt{   0.300}} {\bftt{   0.266}} 
+{\bftt{>    0.252}}
+P16 Normalized area under ROC    [0 → 1]     {\bftt{       }} {\bftt{   0.618}} {\bftt{   0.630}} {\bftt{   0.650}} {\bftt{   0.633}} 
+{\bftt{>    0.626}}
+P17 2AFC score \#1                [0 → 1]     {\bftt{  0.627}}
+\HLI{89}
+\HLI{8}
+{\smallskip}
+{\bftt{Selected measures of association \& hard forecast evaluation}}
+\HLI{89}
+\HLI{13}
+Measure                                 Range     Value    Class    Class    Class     Ma
+> cro     Wgted
+                                                             (1)      (2)      (3)     av
+> erg     averg
+\HLI{89}
+\HLI{13}
+1. Accuracy                           [0 → 1]  {\bftt{   0.566                                  }}
+{\bftt{>              }}
+9. Balanced accuracy            [0 → 0.5 → 1]  {\bftt{   0.405                                  }}
+{\bftt{>              }}
+44. Cohen kappa coefficient      [-1 → 0 → 1]  {\bftt{   0.187                                  }}
+{\bftt{>              }}
+54. Czekanowski index                 [0 → 1]  {\bftt{            0.619    0.548    0.000     0.}}
+{\bftt{> 389     0.542}}
+120. Gilbert skill score       [-.33 → 0 → 1]  {\bftt{            0.107    0.116    0.000     0.}}
+{\bftt{> 075     0.104}}
+138. Gorodkin Rk coefficient     [-1 → 0 → 1]  {\bftt{   0.191                                  }}
+{\bftt{>              }}
+148. Hit rate                         [0 → 1]  {\bftt{            0.693    0.523    0.000     0.}}
+{\bftt{> 405     0.566}}
+205. Peirce skill score          [-1 → 0 → 1]  {\bftt{   0.177                                  }}
+{\bftt{>              }}
+\HLI{89}
+\HLI{13}

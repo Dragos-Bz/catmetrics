@@ -1,0 +1,30 @@
+{com}. webuse lbw, clear
+{txt}(Hosmer & Lemeshow data)
+
+{com}. catmetrics smoke low, metrics(54 196 217 256 266 280 281 282) talpha(0.2) tbeta(0.2)
+{res}{txt}
+{bf:Contingency Table}
+
+      smoke= {c |}    Positive (0)    Negative (1) {c |}    Total 
+{hline 13}{c +}{hline 33}{c +}{hline 10}
+        low= {c |}                                 {c |}
+Positive (0) {c |} {res}             86              44 {c |}      130 {txt}
+Negative (1) {c |} {res}             29              30 {c |}       59 {txt}
+{hline 13}{c +}{hline 33}{c +}{hline 10}
+       Total {c |} {res}            115              74 {c |}      189 {txt}
+
+{bf:Selected measures of association & hard forecast evaluation}
+{hline 67}
+Measure                                             Range     Value
+{hline 67}
+54. Czekanowski index                             [0 → 1]  {bf:  0.7020}
+196. Odds ratio                         [0 → 1 → 8742.25]  {bf:  2.0219}
+217. Relative risk ratio                    [0 → 1 → 188]  {bf:  1.3459}
+256. Theil uncertainty coefficient U              [0 → 1]  {bf:  0.0207}
+266. Tversky index (alpha=.2,beta=.2)             [0 → 1]  {bf:  0.8549}
+280. Yule phi correlation coefficient        [-1 → 0 → 1]  {bf:  0.1614}
+281. Yule Q coefficient                      [-1 → 0 → 1]  {bf:  0.3382}
+282. Yule Y coefficient                      [-1 → 0 → 1]  {bf:  0.1742}
+{hline 67}
+
+{bf:See the Excel file 'Catmetrics.xlsx' for the complete output.}
